@@ -11,12 +11,13 @@ internal class Program
         decimal precoInicial = 0;
         decimal precoPorHora = 0;
 
-        Console.WriteLine("Seja bem vindo ao sistema de estacionamento!\n");
+        Console.WriteLine("Seja bem vindo ao sistema de estacionamento!");
+        Console.WriteLine();
         Console.Write("Digite o preço inicial: ");
-        precoInicial = Convert.ToDecimal(Console.ReadLine());
+        precoInicial = Decimal.Parse(Console.ReadLine());
 
         Console.Write("Agora digite o preço por hora: ");
-        precoPorHora = Convert.ToDecimal(Console.ReadLine());
+        precoPorHora = Decimal.Parse(Console.ReadLine());
 
         // Instancia a classe Estacionamento, já com os valores obtidos anteriormente
         Estacionamento es = new Estacionamento(precoInicial, precoPorHora);
@@ -32,8 +33,9 @@ internal class Program
             Console.WriteLine("2 - Remover veículo");
             Console.WriteLine("3 - Listar veículos");
             Console.WriteLine("4 - Encerrar");
-            Console.Write("\nDigite a sua opção: ");
-
+            Console.WriteLine();
+            Console.Write("Digite a sua opção: ");
+            
             switch (Console.ReadLine())
             {
                 case "1":
@@ -56,8 +58,9 @@ internal class Program
                     Console.WriteLine("Opção inválida");
                     break;
             }
-
-            Console.Write("\nPressione uma tecla para continuar");
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.Write("Pressione uma tecla para continuar");
             Console.ReadLine();
         }
 

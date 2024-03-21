@@ -20,21 +20,22 @@ namespace DesafioFundamentos.Models
         {
             // TODO: Pedir para o usuário digitar uma placa (ReadLine) e adicionar na lista "veiculos"
             // *IMPLEMENTADO*
+            Console.WriteLine();
             Console.Write("Digite a placa do veículo para estacionar: ");
             string veiculo = Console.ReadLine();
             veiculos.Add(veiculo); //adicionar veiculo
 
-            Console.WriteLine($"\nVeiculo de placa {veiculo} adicionado.");
+            Console.WriteLine();
+            Console.WriteLine($"Veiculo de placa {veiculo} adicionado.");
         }
 
         public void RemoverVeiculo()
         {
             //lista os veiculos
-            Console.WriteLine();
             ListarVeiculos();
 
-
-            Console.Write("\nDigite a placa do veículo para remover: ");
+            Console.WriteLine();
+            Console.Write("Digite a placa do veículo para remover: ");
 
             // Pedir para o usuário digitar a placa e armazenar na variável placa
             // *IMPLEMENTADO*
@@ -56,10 +57,12 @@ namespace DesafioFundamentos.Models
                 // *IMPLEMENTADO*
                 veiculos.Remove(placa); //remove veiculo
 
-                Console.WriteLine($"O veículo {placa} foi removido e o preço total foi de: R$ {valorTotal.ToString("F2")}");
+                Console.WriteLine();
+                Console.WriteLine($"O veículo {placa} foi removido e o preço total foi de: R$ {valorTotal:F2}");
             }
             else
             {
+                Console.WriteLine();
                 Console.WriteLine("Desculpe, esse veículo não está estacionado aqui. Confira se digitou a placa corretamente");
             }
         }
@@ -69,10 +72,11 @@ namespace DesafioFundamentos.Models
             // Verifica se há veículos no estacionamento
             if (veiculos.Any())
             {
+                Console.WriteLine();
                 Console.WriteLine("Os veículos estacionados são:");
                 // TODO: Realizar um laço de repetição, exibindo os veículos estacionados
                 // *IMPLEMENTADO*
-
+                Console.WriteLine();
                 foreach (string placa in veiculos)
                 {
                     Console.WriteLine(placa);
